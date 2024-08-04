@@ -1,0 +1,266 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+  
+  h1,
+  h2,
+  h3,
+  input,
+  button {
+    font-family: 'poppins', system-ui;
+  }
+  
+
+:root {
+  --background-color-light: #dddbd3;
+  --background-color-dark: #222831;
+  --text-color-light: #745c53;
+  --text-color-dark: #9290C3;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 14px;
+}
+
+.app.light{
+background: var(--background-color-light);
+color:var(--text-color-light)
+}
+
+.app.dark {
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+  header {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  header,
+  .main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 14px;
+  }
+
+
+.bg.dark{
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.bg{
+    background: var(--background-color-light);
+    position: sticky;
+    top: 0;
+    padding-bottom: 7.5px;
+    margin-bottom: 14px;
+  }
+
+  .input-header{
+    margin-bottom: 10px;
+  }
+  
+  header input {
+    flex: 1;
+    border-radius: 14px;
+    outline: none;
+    width: 100%;
+  }
+  
+  header button {
+    border-radius: 14px;
+    background: transparent;
+    transition-duration: 200ms;
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    opacity: 0.7;
+  }
+  
+  header button,
+  header input {
+    padding: 14px;
+    border: none;
+    outline: none;
+    background: white;
+  }
+
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    gap: 14px;
+    margin-top: 15px;
+    padding: 14px 28px;
+    border-radius: 14px;
+    background: white;
+    margin-bottom: 14px;
+    font-size: 1.7em;
+  }
+
+  .theme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6em;
+    margin: 2px;
+    border: 1px solid var(--text-color-light);
+    border-radius: 21px;
+  }
+
+  .theme button{
+    background: transparent;
+    padding: 0;
+  }
+
+  .theme.light .fa-sun{
+    background: var(--text-color-light);
+    color: var(--background-color-light);
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+  }
+
+  .theme.light .fa-moon{
+    padding: 10px;
+  }
+
+  .theme.dark .fa-moon{
+    background: var(--text-color-dark);
+    color: var(--background-color-dark);
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+
+  }
+
+  .theme.dark .fa-sun{
+    padding: 10px;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 69vh;
+  }
+
+  .main li{
+    list-style: none;
+  }
+
+  .todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 17px;
+    border-radius: 14px;
+    background: white;
+  }
+  
+  .todoItem p {
+    flex: 1;
+  }
+  
+  .actionsContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .actionsContainer button {
+    transition-duration: 200ms;
+    font-size: 1.2em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .actionsContainer button:hover {
+    opacity: 0.7;
+  }
+
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: white;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    margin-top: 14px;
+  }
+  
+  @media (min-width: 640px) {
+    header button,
+    header input {
+      font-size: 1.2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  }
+
+
+
+  /*  scroll bar */
+/* Scrollbar Styles for Light Theme */
+.app.light ::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.app.light ::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the track */
+}
+
+.app.light ::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the draggable part */
+}
+
+.app.light ::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the draggable part when hovered */
+}
+
+.app.light {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #f1f1f1; /* For Firefox: thumb color and track color */
+}
+
+/* Scrollbar Styles for Dark Theme */
+.app.dark ::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.app.dark ::-webkit-scrollbar-track {
+  background: #333; /* Background of the track */
+}
+
+.app.dark ::-webkit-scrollbar-thumb {
+  background: #555; /* Color of the draggable part */
+}
+
+.app.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3c3c3c; /* Color of the draggable part when hovered */
+}
+
+.app.dark {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #555 #333; /* For Firefox: thumb color and track color */
+}
